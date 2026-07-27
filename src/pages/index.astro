@@ -1,0 +1,39 @@
+---
+const titulo = "Hermes Test 🧠";
+const fecha = new Date().toLocaleDateString("es-ES", { year: "numeric", month: "long", day: "numeric" });
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{titulo}</title>
+  <style>
+    :root { --bg: #0f0f1a; --card: #1a1a2e; --accent: #6c63ff; --accent2: #ff6b6b; --text: #e8e8f0; --muted: #8888aa; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:"Inter",sans-serif; background:var(--bg); color:var(--text); min-height:100vh; display:flex; flex-direction:column; align-items:center; }
+    .container { max-width:800px; padding:2rem; text-align:center; }
+    h1 { font-size:2.8rem; background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .card { background:var(--card); padding:1.5rem; border-radius:16px; border:1px solid rgba(255,255,255,0.06); }
+    .status { padding:1rem; background:var(--card); border-radius:16px; }
+    footer { margin-top:3rem; color:var(--muted); font-size:0.8rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>{titulo}</h1>
+    <p style="color:var(--muted)">Mi primera página con Astro + Hermes Agent</p>
+    <p style="font-size:0.8rem;color:var(--muted)">📅 {fecha}</p>
+    <div class="status">
+      <p>✅ <strong>Desplegado correctamente</strong> desde GitHub + Coolify 🚀</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0">
+      <div class="card"><h3>⚡ Astro</h3><p style="font-size:0.8rem;color:var(--muted)">Framework web rápido</p></div>
+      <div class="card"><h3>🚀 Coolify</h3><p style="font-size:0.8rem;color:var(--muted)">Deploy automático</p></div>
+      <div class="card"><h3>🐙 GitHub</h3><p style="font-size:0.8rem;color:var(--muted)">Código fuente</p></div>
+      <div class="card"><h3>🧠 Hermes</h3><p style="font-size:0.8rem;color:var(--muted)">Asistente IA</p></div>
+    </div>
+    <p style="font-size:0.8rem;color:var(--muted)">© 2026 Hermes Test — Creado por Hermes Agent para Alejandro</p>
+  </div>
+</body>
+</html>
